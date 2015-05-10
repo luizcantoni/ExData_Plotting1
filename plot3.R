@@ -1,0 +1,7 @@
+source("script.R")
+plot(data$Datetime, data$Sub_metering_1,type="l",ylab="Energy sub metering",xlab="") 
+lines(data$Datetime,data$Sub_metering_2,col="red")
+lines(data$Datetime,data$Sub_metering_3,col="blue")
+legend("topright", legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), col = c("black","red","blue"), lwd=2)
+dev.copy(png,file="plot3.png")
+dev.off()
